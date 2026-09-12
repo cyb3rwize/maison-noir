@@ -1,5 +1,6 @@
 import { Hero } from '@/components/sections/Hero'
 import { Philosophy } from '@/components/sections/Philosophy'
+import { DailySpecial } from '@/components/sections/DailySpecial'
 import { SignatureDishes } from '@/components/sections/SignatureDishes'
 import { ChefStory } from '@/components/sections/ChefStory'
 import { Reviews } from '@/components/sections/Reviews'
@@ -14,6 +15,7 @@ export default function Home() {
     <>
       <Hero />
       <Philosophy />
+      <DailySpecial />
       <SignatureDishes />
       <ChefStory />
       <Reviews />
