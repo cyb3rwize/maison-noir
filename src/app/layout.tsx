@@ -41,10 +41,20 @@ export const metadata: Metadata = {
   },
   description: site.description,
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'),
+  icons: {
+    icon: [{ url: '/icon.svg', type: 'image/svg+xml' }],
+    apple: [{ url: '/icon.svg' }],
+  },
   openGraph: {
     title: `${site.name} — ${site.tagline}`,
     description: site.description,
     type: 'website',
+    siteName: site.name,
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: `${site.name} — ${site.tagline}`,
+    description: site.description,
   },
 }
 
@@ -55,8 +65,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       className={`${display.variable} ${body.variable} ${accent.variable}`}
       suppressHydrationWarning
     >
-      <body className="bg-bg-primary text-bone font-body antialiased">
+      <head>
         <ThemeScript />
+      </head>
+      <body className="bg-bg-primary text-bone font-body antialiased">
         <Providers>
           <CustomCursor />
           <Navbar />
