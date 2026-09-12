@@ -1,6 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import Image from 'next/image'
 import { GlassCard } from '@/components/ui/GlassCard'
 import type { Dish } from '@/lib/data/menu'
 import { EASE_OUT } from '@/lib/utils/motion'
@@ -26,14 +27,17 @@ export function DishCard({ dish, onClick, index = 0 }: DishCardProps) {
       className="text-left w-full group"
     >
       <GlassCard hover className="overflow-hidden p-0 h-full">
-        <div className="relative aspect-[4/5] bg-gradient-to-br from-bg-tertiary to-bg-secondary overflow-hidden">
-          <div className="absolute inset-0 flex items-center justify-center">
-            <span className="font-display text-8xl text-gold/10 italic select-none">
-              {String(index + 1).padStart(2, '0')}
-            </span>
-          </div>
-          <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-bg-primary/90 to-transparent" />
-          <span className="absolute top-4 right-4 text-[10px] uppercase tracking-[0.25em] text-gold bg-bg-primary/60 backdrop-blur px-3 py-1 rounded-pill">
+        <div className="relative aspect-[4/5] bg-bg-tertiary overflow-hidden">
+          <Image
+            src={dish.image}
+            alt={dish.name}
+            fill
+            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+            className="object-cover group-hover:scale-105 transition-transform duration-700"
+            quality={85}
+          />
+          <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-bg-primary/95 to-transparent" />
+          <span className="absolute top-4 right-4 text-xs uppercase tracking-[0.25em] text-gold bg-bg-primary/60 backdrop-blur px-3 py-1 rounded-pill">
             {dish.category}
           </span>
         </div>
@@ -42,13 +46,13 @@ export function DishCard({ dish, onClick, index = 0 }: DishCardProps) {
           <h3 className="font-display text-2xl text-bone group-hover:text-gold transition-colors duration-300 mb-3">
             {dish.name}
           </h3>
-          <p className="text-sm text-muted leading-relaxed mb-4 line-clamp-2">
+          <p className="text-sm font-medium text-muted leading-relaxed mb-4 line-clamp-2">
             {dish.description}
           </p>
           <div className="flex items-center justify-between pt-4 border-t border-border">
             <span className="font-display text-xl text-gold">${dish.price}</span>
             {dish.winePairing && (
-              <span className="text-[10px] text-muted italic font-accent text-right max-w-[120px]">
+              <span className="text-xs font-medium text-muted text-right max-w-[120px]">
                 {dish.winePairing}
               </span>
             )}

@@ -116,7 +116,7 @@ export function MapSVG({ className }: { className?: string }) {
       </svg>
 
       {/* Bottom-right legend */}
-      <div className="absolute bottom-4 right-4 text-[10px] uppercase tracking-[0.25em] text-muted">
+      <div className="absolute bottom-4 right-4 text-xs uppercase tracking-[0.25em] text-muted">
         42 Obsidian Ln
       </div>
     </div>

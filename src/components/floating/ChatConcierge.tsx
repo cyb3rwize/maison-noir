@@ -113,11 +113,11 @@ export function ChatConcierge() {
           >
             {/* Header */}
             <div className="p-5 border-b border-border">
-              <p className="text-[10px] uppercase tracking-[0.25em] text-gold mb-1">
+              <p className="text-xs uppercase tracking-[0.25em] text-gold mb-1">
                 Concierge
               </p>
               <p className="font-display text-xl text-bone">Camille</p>
-              <p className="text-xs text-muted mt-1 flex items-center gap-1.5">
+              <p className="text-xs font-medium text-muted mt-1 flex items-center gap-1.5">
                 <span className="h-2 w-2 rounded-full bg-gold animate-pulse" />
                 Online now
               </p>
@@ -151,7 +151,7 @@ export function ChatConcierge() {
                     key={q}
                     type="button"
                     onClick={() => sendMessage(q)}
-                    className="text-xs px-3 py-1.5 rounded-pill border border-border text-bone/70 hover:border-gold/40 hover:text-gold transition-colors duration-300"
+                    className="text-xs px-3 py-1.5 rounded-pill border border-border text-bone hover:border-gold/40 hover:text-gold transition-colors duration-300"
                   >
                     {q}
                   </button>
@@ -172,7 +172,7 @@ export function ChatConcierge() {
                 value={input}
                 onChange={(e) => setInput(e.target.value)}
                 placeholder="Ask me anything..."
-                className="flex-1 h-10 px-3 rounded-md bg-bg-secondary/60 border border-border text-sm text-bone placeholder:text-muted/60 focus:outline-none focus:border-gold/60"
+                className="flex-1 h-10 px-3 rounded-md bg-bg-secondary/60 border border-border text-sm text-bone placeholder:text-muted focus:outline-none focus:border-gold/60"
               />
               <button
                 type="submit"

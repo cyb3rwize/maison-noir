@@ -49,7 +49,7 @@ export function Newsletter() {
       <p className="text-xs uppercase tracking-[0.25em] text-gold mb-4">
         Newsletter
       </p>
-      <p className="text-sm text-muted mb-4 max-w-xs">
+      <p className="text-sm font-medium text-muted mb-4 max-w-xs">
         Seasonal menus, chef notes, and first access to reservations.
       </p>
 
@@ -66,7 +66,7 @@ export function Newsletter() {
             onChange={(e) => setEmail(e.target.value)}
             placeholder="your@email.com"
             required
-            className="flex-1 h-11 px-4 rounded-md bg-bg-secondary/60 border border-border text-sm text-bone placeholder:text-muted/60 focus:outline-none focus:border-gold/60"
+            className="flex-1 h-11 px-4 rounded-md bg-bg-secondary/60 border border-border text-sm text-bone placeholder:text-muted focus:outline-none focus:border-gold/60"
           />
           <button
             type="submit"

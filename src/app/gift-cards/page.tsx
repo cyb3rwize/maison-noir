@@ -106,7 +106,7 @@ export default function GiftCardsPage() {
                 <GlassCard className="p-8 aspect-[3/2] flex flex-col justify-between bg-gradient-to-br from-bg-tertiary to-bg-primary">
                   <div>
                     <Gift size={28} className="text-gold mb-6" />
-                    <p className="text-[10px] uppercase tracking-[0.25em] text-gold mb-2">
+                    <p className="text-xs uppercase tracking-[0.25em] text-gold mb-2">
                       Gift Card
                     </p>
                     <p className="font-display text-2xl text-bone">
@@ -118,7 +118,7 @@ export default function GiftCardsPage() {
                       ${finalAmount || 0}
                     </p>
                     {recipient && (
-                      <p className="text-xs text-muted mt-2">For {recipient}</p>
+                      <p className="text-xs font-medium text-muted mt-2">For {recipient}</p>
                     )}
                   </div>
                 </GlassCard>
@@ -148,7 +148,7 @@ export default function GiftCardsPage() {
                           'h-12 rounded-md text-sm transition-colors duration-300',
                           amount === a && !custom
                             ? 'bg-gold text-bg-primary'
-                            : 'border border-border text-bone/80 hover:border-gold/40'
+                            : 'border border-border text-bone hover:border-gold/40'
                         )}
                       >
                         ${a}
@@ -214,7 +214,7 @@ export default function GiftCardsPage() {
                       onChange={(e) => setMessage(e.target.value)}
                       rows={4}
                       placeholder="A short note to accompany the card..."
-                      className="w-full px-4 py-3 rounded-md bg-bg-secondary/60 border border-border text-bone placeholder:text-muted/60 resize-none focus:outline-none focus:border-gold/60"
+                      className="w-full px-4 py-3 rounded-md bg-bg-secondary/60 border border-border text-bone placeholder:text-muted resize-none focus:outline-none focus:border-gold/60"
                     />
                   </div>
                 </div>
@@ -223,7 +223,7 @@ export default function GiftCardsPage() {
                   Continue to Payment
                 </Button>
 
-                <p className="text-xs text-muted italic text-center">
+                <p className="text-xs font-medium text-muted text-center">
                   Card valid for 12 months from purchase. Non-refundable.
                 </p>
               </form>

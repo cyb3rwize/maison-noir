@@ -65,7 +65,7 @@ export default function GalleryPage() {
                   'px-5 py-2.5 rounded-pill text-sm transition-colors duration-300',
                   activeCategory === c.id
                     ? 'bg-gold text-bg-primary'
-                    : 'border border-border text-bone/70 hover:border-gold/40'
+                    : 'border border-border text-bone hover:border-gold/40'
                 )}
               >
                 {c.label}

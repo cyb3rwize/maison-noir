@@ -65,7 +65,7 @@ export function GuestForm({ data, onChange }: GuestFormProps) {
                   'px-4 py-2 rounded-pill text-xs transition-colors duration-300',
                   active
                     ? 'bg-gold text-bg-primary'
-                    : 'border border-border text-bone/70 hover:border-gold/40'
+                    : 'border border-border text-bone hover:border-gold/40'
                 )}
               >
                 {occ}
@@ -89,7 +89,7 @@ export function GuestForm({ data, onChange }: GuestFormProps) {
           onChange={(e) => onChange({ notes: e.target.value })}
           rows={3}
           placeholder="Allergies, seating preferences, anything we should know..."
-          className="w-full px-4 py-3 rounded-md bg-bg-secondary/60 border border-border text-bone placeholder:text-muted/60 focus:outline-none focus:border-gold/60 resize-none"
+          className="w-full px-4 py-3 rounded-md bg-bg-secondary/60 border border-border text-bone placeholder:text-muted focus:outline-none focus:border-gold/60 resize-none"
         />
       </div>
     </div>

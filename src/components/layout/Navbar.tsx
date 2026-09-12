@@ -81,7 +81,7 @@ export function Navbar() {
                     className={cn(
                       'relative px-4 py-2 text-sm rounded-pill',
                       'transition-colors duration-300',
-                      active ? 'text-gold' : 'text-bone/80 hover:text-bone'
+                      active ? 'text-gold' : 'text-bone hover:text-bone'
                     )}
                   >
                     {link.label}

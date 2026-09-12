@@ -17,41 +17,41 @@ export function ReviewStep({ data }: ReviewStepProps) {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         <div className="space-y-6">
           <div>
-            <p className="text-[10px] uppercase tracking-[0.25em] text-gold mb-2">
+            <p className="text-xs uppercase tracking-[0.25em] text-gold mb-2">
               When
             </p>
             <p className="font-display text-2xl text-bone">
               {formatDate(data.date)}
             </p>
-            <p className="text-sm text-muted mt-1">
+            <p className="text-sm font-medium text-muted mt-1">
               {formatTime(data.time)} · {data.partySize}{' '}
               {data.partySize === 1 ? 'guest' : 'guests'}
             </p>
           </div>
 
           <div>
-            <p className="text-[10px] uppercase tracking-[0.25em] text-gold mb-2">
+            <p className="text-xs uppercase tracking-[0.25em] text-gold mb-2">
               Where
             </p>
             <p className="font-display text-2xl text-bone">{seatingLabel}</p>
           </div>
 
           <div>
-            <p className="text-[10px] uppercase tracking-[0.25em] text-gold mb-2">
+            <p className="text-xs uppercase tracking-[0.25em] text-gold mb-2">
               Guest
             </p>
             <p className="text-bone">
               {data.firstName} {data.lastName}
             </p>
-            <p className="text-sm text-muted mt-1">{data.email}</p>
-            <p className="text-sm text-muted">{data.phone}</p>
+            <p className="text-sm font-medium text-muted mt-1">{data.email}</p>
+            <p className="text-sm font-medium text-muted">{data.phone}</p>
           </div>
         </div>
 
         <div className="space-y-6">
           {data.occasion && data.occasion !== 'None' && (
             <div>
-              <p className="text-[10px] uppercase tracking-[0.25em] text-gold mb-2">
+              <p className="text-xs uppercase tracking-[0.25em] text-gold mb-2">
                 Occasion
               </p>
               <p className="text-bone">{data.occasion}</p>
@@ -60,17 +60,17 @@ export function ReviewStep({ data }: ReviewStepProps) {
 
           {data.notes && (
             <div>
-              <p className="text-[10px] uppercase tracking-[0.25em] text-gold mb-2">
+              <p className="text-xs uppercase tracking-[0.25em] text-gold mb-2">
                 Notes
               </p>
-              <p className="text-sm text-bone/80 whitespace-pre-line">
+              <p className="text-sm text-bone whitespace-pre-line">
                 {data.notes}
               </p>
             </div>
           )}
 
           <div className="pt-4 border-t border-border">
-            <p className="text-xs text-muted italic">
+            <p className="text-xs font-medium text-muted">
               A $25 per-person deposit will be authorized to hold your
               reservation. Fully refundable up to 24 hours before.
             </p>

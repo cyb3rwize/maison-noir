@@ -35,7 +35,7 @@ export function DatePicker({ value, onChange }: DatePickerProps) {
             >
               <span
                 className={cn(
-                  'text-[10px] uppercase tracking-widest',
+                  'text-xs uppercase tracking-widest',
                   active ? 'text-bg-primary/70' : 'text-muted'
                 )}
               >
@@ -44,7 +44,7 @@ export function DatePicker({ value, onChange }: DatePickerProps) {
               <span className="font-display text-2xl mt-1">{d.date}</span>
               <span
                 className={cn(
-                  'text-[10px] uppercase tracking-widest mt-1',
+                  'text-xs uppercase tracking-widest mt-1',
                   active ? 'text-bg-primary/70' : 'text-muted'
                 )}
               >

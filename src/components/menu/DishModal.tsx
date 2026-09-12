@@ -2,6 +2,7 @@
 
 import { useEffect } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
+import Image from 'next/image'
 import { X, Wine, AlertCircle } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
 import { EASE_OUT } from '@/lib/utils/motion'
@@ -49,17 +50,20 @@ export function DishModal({ dish, onClose }: DishModalProps) {
           >
             <div className="pointer-events-auto w-full max-w-4xl max-h-[90vh] overflow-hidden rounded-lg glass-strong flex flex-col md:flex-row">
               {/* Image side */}
-              <div className="relative md:w-1/2 aspect-square md:aspect-auto bg-gradient-to-br from-bg-tertiary to-bg-secondary shrink-0">
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <span className="font-display text-[10rem] text-gold/10 italic select-none">
-                    {dish.name.charAt(0)}
-                  </span>
-                </div>
+              <div className="relative md:w-1/2 aspect-square md:aspect-auto bg-bg-tertiary shrink-0 overflow-hidden">
+                <Image
+                  src={dish.image}
+                  alt={dish.name}
+                  fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  className="object-cover"
+                  quality={90}
+                />
               </div>
 
               {/* Content side */}
               <div className="md:w-1/2 p-8 md:p-10 overflow-y-auto flex flex-col">
-                <span className="text-[10px] uppercase tracking-[0.25em] text-gold mb-3">
+                <span className="text-xs uppercase tracking-[0.25em] text-gold mb-3">
                   {dish.category}
                 </span>
                 <h2 className="font-display text-display-sm text-bone mb-4">
@@ -71,14 +75,14 @@ export function DishModal({ dish, onClose }: DishModalProps) {
 
                 {dish.ingredients.length > 0 && (
                   <div className="mb-6">
-                    <p className="text-[10px] uppercase tracking-[0.25em] text-gold mb-3">
+                    <p className="text-xs uppercase tracking-[0.25em] text-gold mb-3">
                       Ingredients
                     </p>
                     <ul className="flex flex-wrap gap-2">
                       {dish.ingredients.map((ing) => (
                         <li
                           key={ing}
-                          className="text-xs px-3 py-1 rounded-pill border border-border text-bone/80"
+                          className="text-xs px-3 py-1 rounded-pill border border-border text-bone"
                         >
                           {ing}
                         </li>
@@ -89,7 +93,7 @@ export function DishModal({ dish, onClose }: DishModalProps) {
 
                 {dish.allergens.length > 0 && (
                   <div className="mb-6">
-                    <p className="text-[10px] uppercase tracking-[0.25em] text-gold mb-3 flex items-center gap-1.5">
+                    <p className="text-xs uppercase tracking-[0.25em] text-gold mb-3 flex items-center gap-1.5">
                       <AlertCircle size={10} /> Allergens
                     </p>
                     <ul className="flex flex-wrap gap-2">
@@ -107,10 +111,10 @@ export function DishModal({ dish, onClose }: DishModalProps) {
 
                 {dish.winePairing && (
                   <div className="mb-6">
-                    <p className="text-[10px] uppercase tracking-[0.25em] text-gold mb-3 flex items-center gap-1.5">
+                    <p className="text-xs uppercase tracking-[0.25em] text-gold mb-3 flex items-center gap-1.5">
                       <Wine size={10} /> Wine Pairing
                     </p>
-                    <p className="text-sm text-bone/80 italic font-accent">
+                    <p className="text-sm text-bone italic font-accent">
                       {dish.winePairing}
                     </p>
                   </div>

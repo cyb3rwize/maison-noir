@@ -64,7 +64,7 @@ export function ContactForm() {
         <h3 className="font-display text-2xl text-bone mb-3">
           Thank you
         </h3>
-        <p className="text-sm text-muted mb-8 max-w-sm mx-auto">
+        <p className="text-sm font-medium text-muted mb-8 max-w-sm mx-auto">
           Your message has reached the right person. Expect a reply within
           24 hours.
         </p>
@@ -161,7 +161,7 @@ export function ContactForm() {
           placeholder="How can we help?"
           className={cn(
             'w-full px-4 py-3 rounded-md bg-bg-secondary/60 border border-border',
-            'text-bone placeholder:text-muted/60 resize-none',
+            'text-bone placeholder:text-muted resize-none',
             'focus:outline-none focus:border-gold/60'
           )}
         />

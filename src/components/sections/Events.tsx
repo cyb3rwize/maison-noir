@@ -49,11 +49,11 @@ export function Events() {
                   </p>
                 </div>
 
-                <p className="text-sm text-muted leading-relaxed mb-6 flex-1">
+                <p className="text-sm font-medium text-muted leading-relaxed mb-6 flex-1">
                   {event.description}
                 </p>
 
-                <div className="flex flex-wrap items-center gap-4 text-xs text-muted mb-6 pt-4 border-t border-border">
+                <div className="flex flex-wrap items-center gap-4 text-xs text-muted mb-6 pt-4 border-t border-border font-medium">
                   <span className="flex items-center gap-1.5">
                     <Clock size={12} className="text-gold" /> {event.time}
                   </span>

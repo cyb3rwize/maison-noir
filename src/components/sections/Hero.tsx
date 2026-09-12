@@ -1,13 +1,13 @@
-'use client'
+"use client"
 
 import Link from 'next/link'
+import Image from 'next/image'
 import { motion } from 'framer-motion'
 
 import { Button } from '@/components/ui/Button'
 import { SectionLabel } from '@/components/ui/SectionLabel'
 import { SplitText } from '@/components/animations/Reveal'
 import { ScrollCue } from '@/components/animations/ScrollCue'
-import { Hero3D } from '@/components/3d/Hero3D'
 import { EASE_OUT } from '@/lib/utils/motion'
 import { site } from '@/lib/data/site'
 
@@ -21,14 +21,30 @@ function getGreeting() {
 export function Hero() {
   return (
     <section className="relative min-h-[100svh] w-full overflow-hidden flex flex-col">
-      {/* Ambient mesh */}
-      <div className="ambient-mesh" aria-hidden />
+      {/* ============================================
+          Background photo — real restaurant interior
+          ============================================ */}
+      <div className="absolute inset-0 z-0">
+        <Image
+          src="/images/hero/hero-dining.jpg"
+          alt="Maison Noir dining room"
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover object-center"
+          quality={90}
+        />
+        {/* Dark cinematic overlay for text readability */}
+        <div
+          aria-hidden
+          className="absolute inset-0 bg-gradient-to-b from-bg-primary/70 via-bg-primary/60 to-bg-primary/90"
+        />
+        {/* Ambient glow */}
+        <div className="ambient-mesh" aria-hidden />
+      </div>
 
-      {/* 3D layer behind content */}
-      <Hero3D />
-
-      {/* Top spacer */}
-      <div className="h-28 md:h-32 shrink-0" aria-hidden />
+      {/* Top spacer for navbar */}
+      <div className="h-28 md:h-32 shrink-0 relative z-10" aria-hidden />
 
       {/* Center content */}
       <div className="flex-1 flex items-center justify-center relative z-10">
@@ -61,7 +77,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: EASE_OUT, delay: 0.8 }}
-            className="text-lg md:text-xl text-muted max-w-xl mx-auto font-accent italic leading-relaxed"
+            className="text-lg md:text-xl text-bone/90 max-w-xl mx-auto font-accent italic leading-relaxed"
           >
             Seasonal ingredients. Open fire. Silence you can taste.
             A dining room where every detail is intentional.
@@ -98,7 +114,7 @@ export function Hero() {
           <InfoItem label="Tonight" value="5:30 PM — 11:00 PM" />
           <InfoItem
             label="Location"
-            value={`${site.address.street}, ${site.address.city}`}
+            value={site.address.street + ", " + site.address.city}
           />
           <InfoItem label="Reservations" value={site.phone} />
           <div className="col-span-2 md:col-span-1 flex justify-end">
@@ -123,10 +139,10 @@ export function Hero() {
 function InfoItem({ label, value }: { label: string; value: string }) {
   return (
     <div className="flex flex-col gap-1.5">
-      <span className="text-[10px] uppercase tracking-[0.25em] text-gold/70">
+      <span className="text-xs uppercase tracking-[0.22em] text-gold font-semibold">
         {label}
       </span>
-      <span className="text-xs md:text-sm text-bone/80">{value}</span>
+      <span className="text-sm md:text-base text-bone font-medium">{value}</span>
     </div>
   )
 }

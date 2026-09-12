@@ -51,7 +51,7 @@ export default function WinePage() {
                   'px-5 py-2.5 rounded-pill text-sm transition-colors duration-300',
                   activeType === t.id
                     ? 'bg-gold text-bg-primary'
-                    : 'border border-border text-bone/70 hover:border-gold/40'
+                    : 'border border-border text-bone hover:border-gold/40'
                 )}
               >
                 {t.label}
@@ -75,7 +75,7 @@ export default function WinePage() {
                         <h3 className="font-display text-xl md:text-2xl text-bone">
                           {w.name}
                         </h3>
-                        <p className="text-xs text-muted mt-1">
+                        <p className="text-xs font-medium text-muted mt-1">
                           {w.producer} · {w.region} · {w.vintage}
                         </p>
                       </div>
@@ -86,10 +86,10 @@ export default function WinePage() {
                         <p className="text-sm text-bone">${w.bottle} / bottle</p>
                       </div>
                     </div>
-                    <p className="text-sm text-muted leading-relaxed mb-3">
+                    <p className="text-sm font-medium text-muted leading-relaxed mb-3">
                       {w.notes}
                     </p>
-                    <p className="text-xs text-gold/80 italic">
+                    <p className="text-xs text-gold italic">
                       Pairs with: {w.pairing}
                     </p>
                   </div>

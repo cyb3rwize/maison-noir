@@ -18,7 +18,7 @@ export function Footer() {
           {/* Brand */}
           <div className="md:col-span-5">
             <Logo className="text-2xl" />
-            <p className="mt-6 text-sm text-muted max-w-sm leading-relaxed">
+            <p className="mt-6 text-sm text-muted leading-relaxed">
               {site.description}
             </p>
 
@@ -34,7 +34,7 @@ export function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={label}
-                  className="h-10 w-10 rounded-full border border-border flex items-center justify-center text-bone/70 hover:text-gold hover:border-gold/40 transition-colors duration-300"
+                  className="h-10 w-10 rounded-full border border-border flex items-center justify-center text-bone hover:text-gold hover:border-gold/40 transition-colors duration-300"
                 >
                   <Icon size={16} />
                 </a>
@@ -52,7 +52,7 @@ export function Footer() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-sm text-bone/80 hover:text-gold transition-colors duration-300"
+                    className="text-sm text-bone hover:text-gold transition-colors duration-300"
                   >
                     {link.label}
                   </Link>
@@ -61,7 +61,7 @@ export function Footer() {
               <li>
                 <Link
                   href="/reservations"
-                  className="text-sm text-bone/80 hover:text-gold transition-colors duration-300"
+                  className="text-sm text-bone hover:text-gold transition-colors duration-300"
                 >
                   Reservations
                 </Link>
@@ -74,12 +74,12 @@ export function Footer() {
             <h4 className="text-xs uppercase tracking-[0.25em] text-gold mb-6">
               Visit
             </h4>
-            <address className="not-italic text-sm text-bone/80 leading-relaxed">
+            <address className="not-italic text-sm text-bone leading-relaxed">
               {site.address.street}
               <br />
               {site.address.city}, {site.address.state} {site.address.zip}
             </address>
-            <p className="mt-4 text-sm text-bone/80">
+            <p className="mt-4 text-sm text-bone">
               <a
                 href={`tel:${site.phone.replace(/\s/g, '')}`}
                 className="hover:text-gold transition-colors duration-300"
@@ -87,7 +87,7 @@ export function Footer() {
                 {site.phone}
               </a>
             </p>
-            <p className="mt-2 text-sm text-bone/80">
+            <p className="mt-2 text-sm text-bone">
               <a
                 href={`mailto:${site.email}`}
                 className="hover:text-gold transition-colors duration-300"
@@ -103,7 +103,7 @@ export function Footer() {
                   className="flex items-center justify-between text-xs text-muted"
                 >
                   <span>{h.day}</span>
-                  <span className="text-bone/70">{h.time}</span>
+                  <span className="text-bone">{h.time}</span>
                 </div>
               ))}
             </div>
@@ -116,7 +116,7 @@ export function Footer() {
         </div>
 
         <div className="mt-10 pt-8 border-t border-border flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-xs text-muted">
+          <p className="text-xs font-medium text-muted">
             © {year} {site.name}. All rights reserved.
           </p>
           <div className="flex items-center gap-6 text-xs text-muted">

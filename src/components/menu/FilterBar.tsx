@@ -22,7 +22,7 @@ export function FilterBar({ active, onChange }: FilterBarProps) {
             'relative px-5 py-2.5 rounded-pill text-sm transition-colors duration-300',
             active === c.id
               ? 'text-bg-primary bg-gold'
-              : 'text-bone/70 hover:text-bone border border-border hover:border-gold/40'
+              : 'text-bone hover:text-bone border border-border hover:border-gold/40'
           )}
         >
           {c.label}

@@ -32,8 +32,8 @@ export function StepIndicator({ current }: StepIndicatorProps) {
               </motion.div>
               <span
                 className={cn(
-                  'text-[10px] uppercase tracking-[0.25em] transition-colors duration-300',
-                  active ? 'text-gold' : done ? 'text-bone/70' : 'text-muted'
+                  'text-xs uppercase tracking-[0.25em] transition-colors duration-300',
+                  active ? 'text-gold' : done ? 'text-bone' : 'text-muted'
                 )}
               >
                 {label}

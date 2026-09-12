@@ -22,7 +22,7 @@ export function PartySize({ value, onChange }: PartySizeProps) {
               'h-12 w-12 rounded-full text-sm font-medium transition-colors duration-300',
               value === n
                 ? 'bg-gold text-bg-primary'
-                : 'border border-border text-bone/80 hover:border-gold/40 hover:text-bone'
+                : 'border border-border text-bone hover:border-gold/40 hover:text-bone'
             )}
           >
             {n}
@@ -35,7 +35,7 @@ export function PartySize({ value, onChange }: PartySizeProps) {
             'h-12 px-5 rounded-full text-xs font-medium transition-colors duration-300',
             value >= 9
               ? 'bg-gold text-bg-primary'
-              : 'border border-border text-bone/80 hover:border-gold/40 hover:text-bone'
+              : 'border border-border text-bone hover:border-gold/40 hover:text-bone'
           )}
         >
           9+ (call us)

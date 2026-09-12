@@ -8,8 +8,8 @@ interface SectionLabelProps {
 export function SectionLabel({ children, className }: SectionLabelProps) {
   return (
     <div className={cn('flex items-center gap-3', className)}>
-      <span className="h-px w-8 bg-gold/50" />
-      <span className="text-xs uppercase tracking-[0.3em] text-gold">
+      <span className="h-px w-8 bg-gold" />
+      <span className="text-xs uppercase tracking-[0.22em] text-gold font-medium">
         {children}
       </span>
     </div>

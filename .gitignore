@@ -35,3 +35,6 @@ public/hdri/*.hdr
 
 # Backups
 *.bak
+
+# Local backups (do not commit)
+_backup/

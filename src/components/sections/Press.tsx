@@ -20,7 +20,7 @@ export function Press() {
         {pressLogos.map((logo) => (
           <div
             key={logo.name}
-            className="flex items-center gap-2 shrink-0 text-2xl md:text-3xl font-display text-muted/60 hover:text-gold transition-colors duration-300 whitespace-nowrap"
+            className="flex items-center gap-2 shrink-0 text-2xl md:text-3xl font-display text-muted hover:text-gold transition-colors duration-300 whitespace-nowrap"
           >
             <span>{logo.name}</span>
             {logo.stars > 0 && (
@@ -38,7 +38,7 @@ export function Press() {
           {pressQuotes.map((q, i) => (
             <Reveal key={q.source} delay={0.1 * i}>
               <blockquote className="flex flex-col h-full">
-                <p className="font-accent italic text-lg text-bone/90 leading-snug mb-6 flex-1">
+                <p className="font-accent italic text-lg text-bone leading-snug mb-6 flex-1">
                   &ldquo;{q.quote}&rdquo;
                 </p>
                 <footer className="text-xs uppercase tracking-[0.25em] text-gold">

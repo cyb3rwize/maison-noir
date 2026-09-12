@@ -42,7 +42,7 @@ const config: Config = {
         'display-xl': ['clamp(3rem, 8vw, 8rem)', { lineHeight: '0.95', letterSpacing: '-0.03em' }],
         'display-lg': ['clamp(2.5rem, 6vw, 5rem)', { lineHeight: '1', letterSpacing: '-0.02em' }],
         'display-md': ['clamp(2rem, 4vw, 3.5rem)', { lineHeight: '1.05', letterSpacing: '-0.02em' }],
-        'display-sm': ['clamp(1.5rem, 3vw, 2.25rem)', { lineHeight: '1.1', letterSpacing: '-0.01em' }],
+        'display-sm': ['clamp(1.65rem, 3.2vw, 2.4rem)', { lineHeight: '1.15', letterSpacing: '-0.01em' }],
       },
       borderRadius: {
         sm: '8px',

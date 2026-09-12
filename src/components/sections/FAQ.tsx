@@ -72,7 +72,7 @@ export function FAQ() {
                         exit={{ height: 0, opacity: 0 }}
                         transition={{ duration: 0.35, ease: EASE_OUT }}
                       >
-                        <p className="px-5 md:px-6 pb-5 md:pb-6 text-sm text-muted leading-relaxed">
+                        <p className="px-5 md:px-6 pb-5 md:pb-6 text-sm font-medium text-muted leading-relaxed">
                           {item.a}
                         </p>
                       </motion.div>

@@ -33,7 +33,7 @@ export function SeatingSelect({ value, onChange }: SeatingSelectProps) {
             >
               {opt.label}
             </p>
-            <p className="text-xs text-muted">{opt.description}</p>
+            <p className="text-xs font-medium text-muted">{opt.description}</p>
           </button>
         )
       })}

@@ -64,7 +64,7 @@ export function Philosophy() {
                 <h3 className="font-display text-2xl text-bone mb-3">
                   {item.title}
                 </h3>
-                <p className="text-sm text-muted leading-relaxed">
+                <p className="text-sm font-medium text-muted leading-relaxed">
                   {item.body}
                 </p>
               </div>

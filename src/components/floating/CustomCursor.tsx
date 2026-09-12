@@ -86,7 +86,7 @@ export default function CustomCursor() {
           <motion.span
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
-            className="absolute inset-0 flex items-center justify-center text-[10px] uppercase tracking-widest text-bone"
+            className="absolute inset-0 flex items-center justify-center text-xs uppercase tracking-widest text-bone"
           >
             {label || state}
           </motion.span>

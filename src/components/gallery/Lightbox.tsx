@@ -1,10 +1,11 @@
 'use client'
 
 import { useEffect } from 'react'
+import Image from 'next/image'
 import { AnimatePresence, motion } from 'framer-motion'
 import { X, ChevronLeft, ChevronRight } from 'lucide-react'
 import { EASE_OUT } from '@/lib/utils/motion'
-import { getGradientStyle, type GalleryItem } from '@/lib/data/gallery'
+import type { GalleryItem } from '@/lib/data/gallery'
 
 interface LightboxProps {
   items: GalleryItem[]
@@ -85,20 +86,25 @@ export function Lightbox({ items, index, onClose, onPrev, onNext }: LightboxProp
           exit={{ opacity: 0, scale: 0.95 }}
           transition={{ duration: 0.4, ease: EASE_OUT }}
           onClick={(e) => e.stopPropagation()}
-          className="relative max-w-5xl w-full max-h-[85vh] aspect-[4/3] rounded-lg overflow-hidden"
-          style={getGradientStyle(item.gradient)}
+          className="relative max-w-5xl w-full max-h-[85vh] aspect-[4/3] rounded-lg overflow-hidden bg-bg-tertiary"
+          
         >
-          <div
-            className="absolute inset-0 opacity-[0.06] mix-blend-overlay pointer-events-none"
-            style={{ backgroundImage: NOISE_SVG }}
+          <Image
+            src={item.image}
+            alt={item.title}
+            fill
+            sizes="100vw"
+            className="object-cover"
+            quality={95}
+            priority
           />
 
           <div className="absolute inset-x-0 bottom-0 p-8 bg-gradient-to-t from-black/80 to-transparent">
-            <p className="text-[10px] uppercase tracking-[0.25em] text-gold mb-2">
+            <p className="text-xs uppercase tracking-[0.25em] text-gold mb-2">
               {item.category}
             </p>
             <p className="font-display text-3xl text-bone">{item.title}</p>
-            <p className="text-xs text-muted mt-2">
+            <p className="text-xs font-medium text-muted mt-2">
               {index + 1} / {items.length}
             </p>
           </div>

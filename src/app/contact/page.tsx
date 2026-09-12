@@ -53,7 +53,7 @@ export default function ContactPage() {
                 <div className="mx-auto h-10 w-10 rounded-full bg-gold/10 flex items-center justify-center text-gold mb-4">
                   <Icon size={18} />
                 </div>
-                <p className="text-[10px] uppercase tracking-[0.25em] text-gold mb-2">
+                <p className="text-xs uppercase tracking-[0.25em] text-gold mb-2">
                   {label}
                 </p>
                 {href ? (
@@ -86,7 +86,7 @@ export default function ContactPage() {
           <div className="lg:col-span-2 space-y-8">
             <Reveal delay={0.15}>
               <div className="glass rounded-lg p-6">
-                <p className="text-[10px] uppercase tracking-[0.25em] text-gold mb-4">
+                <p className="text-xs uppercase tracking-[0.25em] text-gold mb-4">
                   Hours
                 </p>
                 <ul className="space-y-2">
@@ -105,14 +105,14 @@ export default function ContactPage() {
 
             <Reveal delay={0.25}>
               <div className="glass rounded-lg p-6">
-                <p className="text-[10px] uppercase tracking-[0.25em] text-gold mb-4">
+                <p className="text-xs uppercase tracking-[0.25em] text-gold mb-4">
                   Getting Here
                 </p>
                 <ul className="space-y-4">
                   {contactInfo.transit.map((t) => (
                     <li key={t.label}>
                       <p className="text-xs text-gold mb-1">{t.label}</p>
-                      <p className="text-xs text-bone/80 leading-relaxed">
+                      <p className="text-xs text-bone leading-relaxed">
                         {t.detail}
                       </p>
                     </li>
@@ -132,7 +132,7 @@ export default function ContactPage() {
                   <Navigation size={18} />
                 </div>
                 <div>
-                  <p className="text-[10px] uppercase tracking-[0.25em] text-gold mb-1">
+                  <p className="text-xs uppercase tracking-[0.25em] text-gold mb-1">
                     Get Directions
                   </p>
                   <p className="text-sm text-bone group-hover:text-gold transition-colors">

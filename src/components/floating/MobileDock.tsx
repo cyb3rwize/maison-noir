@@ -51,7 +51,7 @@ export function MobileDock() {
                 'px-3 py-1.5 rounded-pill',
                 'min-w-[64px]',
                 'transition-colors duration-300',
-                active ? 'text-gold' : 'text-bone/70'
+                active ? 'text-gold' : 'text-bone'
               )}
             >
               {active && (
@@ -62,7 +62,7 @@ export function MobileDock() {
                 />
               )}
               <Icon size={18} strokeWidth={1.8} />
-              <span className="text-[10px] mt-0.5 uppercase tracking-wider">
+              <span className="text-xs mt-0.5 uppercase tracking-wider">
                 {item.label}
               </span>
             </Link>

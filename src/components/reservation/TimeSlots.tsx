@@ -17,7 +17,7 @@ export function TimeSlots({ date, partySize, value, onChange }: TimeSlotsProps) 
 
   if (!date) {
     return (
-      <p className="text-sm text-muted italic">
+      <p className="text-sm font-medium text-muted">
         Pick a date first to see available times.
       </p>
     )
@@ -42,7 +42,7 @@ export function TimeSlots({ date, partySize, value, onChange }: TimeSlotsProps) 
               active
                 ? 'bg-gold text-bg-primary'
                 : slot.available
-                  ? 'border border-border text-bone/80 hover:border-gold/40 hover:text-bone'
+                  ? 'border border-border text-bone hover:border-gold/40 hover:text-bone'
                   : 'border border-border text-muted'
             )}
           >

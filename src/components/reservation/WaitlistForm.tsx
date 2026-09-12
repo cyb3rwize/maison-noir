@@ -65,7 +65,7 @@ export function WaitlistForm({ date, partySize }: WaitlistFormProps) {
         <h3 className="font-display text-2xl text-bone mb-3">
           You&apos;re on the list
         </h3>
-        <p className="text-sm text-muted max-w-sm mx-auto">
+        <p className="text-sm font-medium text-muted max-w-sm mx-auto">
           We&apos;ll contact you the moment a table opens for that date.
         </p>
       </div>
@@ -79,7 +79,7 @@ export function WaitlistForm({ date, partySize }: WaitlistFormProps) {
         <h3 className="font-display text-xl text-bone mb-2">
           Join the waitlist
         </h3>
-        <p className="text-xs text-muted">
+        <p className="text-xs font-medium text-muted">
           No availability on this date? Get notified when a table opens.
         </p>
       </div>

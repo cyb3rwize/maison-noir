@@ -18,7 +18,7 @@ export function ScrollCue({ label = 'Scroll to explore', className }: ScrollCueP
       className={className}
     >
       <div className="flex flex-col items-center gap-2 text-muted">
-        <span className="text-[10px] uppercase tracking-[0.3em]">{label}</span>
+        <span className="text-xs uppercase tracking-[0.3em]">{label}</span>
         <motion.div
           animate={{ y: [0, 6, 0] }}
           transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}

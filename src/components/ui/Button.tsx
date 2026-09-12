@@ -14,7 +14,7 @@ const buttonVariants = cva(
           'bg-gold text-bg-primary hover:bg-gold-light shadow-glow-gold hover:shadow-glow-gold-lg',
         outline:
           'border border-gold/40 text-gold hover:bg-gold/10 hover:border-gold',
-        ghost: 'text-bone/80 hover:text-bone hover:bg-white/5',
+        ghost: 'text-bone hover:text-bone hover:bg-white/5',
         ember:
           'bg-ember text-bone hover:bg-ember/90 shadow-[0_0_30px_rgba(232,93,47,0.35)]',
       },

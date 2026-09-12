@@ -64,7 +64,7 @@ export default function ExperiencePage() {
                     <h3 className="font-display text-xl md:text-2xl text-bone mb-3">
                       {event.title}
                     </h3>
-                    <p className="text-sm text-muted leading-relaxed">
+                    <p className="text-sm font-medium text-muted leading-relaxed">
                       {event.body}
                     </p>
                   </div>
@@ -82,7 +82,7 @@ export default function ExperiencePage() {
 
         <Reveal delay={0.3}>
           <div className="text-center mt-32 max-w-2xl mx-auto">
-            <p className="font-accent italic text-2xl md:text-3xl text-bone/90 leading-snug">
+            <p className="font-accent italic text-2xl md:text-3xl text-bone leading-snug">
               &ldquo;The room changes nothing about the food. But the food changes
               everything about the room.&rdquo;
             </p>

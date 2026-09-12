@@ -23,7 +23,7 @@ export function DailySpecial() {
 
         <Reveal delay={0.1}>
           <GlassCard className="p-8 md:p-12 text-center relative overflow-hidden">
-            <div className="absolute top-4 right-4 flex items-center gap-1.5 text-gold text-[10px] uppercase tracking-[0.25em]">
+            <div className="absolute top-4 right-4 flex items-center gap-1.5 text-gold text-xs uppercase tracking-[0.25em]">
               <Sparkles size={12} />
               <span>Tonight only</span>
             </div>
@@ -38,7 +38,7 @@ export function DailySpecial() {
 
             <div className="flex items-center justify-center gap-8 mb-8">
               <div>
-                <p className="text-[10px] uppercase tracking-[0.25em] text-gold mb-1">
+                <p className="text-xs uppercase tracking-[0.25em] text-gold mb-1">
                   Price
                 </p>
                 <p className="font-display text-3xl text-gradient-gold">
@@ -47,7 +47,7 @@ export function DailySpecial() {
               </div>
               <div className="h-12 w-px bg-border" />
               <div>
-                <p className="text-[10px] uppercase tracking-[0.25em] text-gold mb-1">
+                <p className="text-xs uppercase tracking-[0.25em] text-gold mb-1">
                   Availability
                 </p>
                 <p className="text-sm text-bone">

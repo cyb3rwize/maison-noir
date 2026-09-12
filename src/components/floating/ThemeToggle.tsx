@@ -81,13 +81,13 @@ export function ThemeToggle() {
                   'flex items-center gap-3 px-3 py-2.5 rounded-sm text-sm transition-colors duration-200 text-left',
                   theme === id
                     ? 'text-gold bg-gold/10'
-                    : 'text-bone/80 hover:text-bone hover:bg-white/5'
+                    : 'text-bone hover:text-bone hover:bg-white/5'
                 )}
               >
                 <Icon size={14} className="shrink-0" />
                 <div className="flex-1">
                   <p className="text-sm">{label}</p>
-                  <p className="text-[10px] text-muted">{hint}</p>
+                  <p className="text-xs font-medium text-muted">{hint}</p>
                 </div>
                 {theme === id && <Check size={12} />}
               </button>
