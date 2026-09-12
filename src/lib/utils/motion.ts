@@ -1,0 +1,42 @@
+import type { Variants } from 'framer-motion'
+
+export const EASE_OUT = [0.16, 1, 0.3, 1] as const
+export const EASE_SPRING = [0.34, 1.56, 0.64, 1] as const
+
+export const fadeUp: Variants = {
+  hidden: { opacity: 0, y: 24 },
+  visible: (i: number = 0) => ({
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.7, ease: EASE_OUT, delay: i * 0.08 },
+  }),
+}
+
+export const fadeIn: Variants = {
+  hidden: { opacity: 0 },
+  visible: { opacity: 1, transition: { duration: 0.6, ease: EASE_OUT } },
+}
+
+export const scaleIn: Variants = {
+  hidden: { opacity: 0, scale: 0.94 },
+  visible: { opacity: 1, scale: 1, transition: { duration: 0.6, ease: EASE_OUT } },
+}
+
+export const stagger: Variants = {
+  hidden: {},
+  visible: { transition: { staggerChildren: 0.08, delayChildren: 0.1 } },
+}
+
+export const float = {
+  animate: {
+    y: [0, -8, 0],
+    transition: { duration: 4, repeat: Infinity, ease: 'easeInOut' as const },
+  },
+}
+
+export const floatSlow = {
+  animate: {
+    y: [0, -14, 0],
+    transition: { duration: 6, repeat: Infinity, ease: 'easeInOut' as const },
+  },
+}
