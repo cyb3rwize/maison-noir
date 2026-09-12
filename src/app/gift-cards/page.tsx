@@ -25,8 +25,11 @@ export default function GiftCardsPage() {
 
   const finalAmount = custom ? parseInt(custom) || 0 : amount
 
+  const [submitting, setSubmitting] = useState(false)
+
   const submit = (e: React.FormEvent) => {
     e.preventDefault()
+
     if (finalAmount < 25) {
       toast({
         type: 'error',
@@ -34,12 +37,19 @@ export default function GiftCardsPage() {
       })
       return
     }
-    setSubmitted(true)
-    toast({
-      type: 'success',
-      title: 'Gift card ready to send',
-      description: 'In a real site this would go to Stripe checkout.',
-    })
+
+    setSubmitting(true)
+
+    // Redirect to mock Stripe-style checkout
+    const query = new URLSearchParams({
+      amount: finalAmount.toString(),
+      recipient,
+      email,
+      sender: senderName,
+      message,
+    }).toString()
+
+    window.location.href = '/checkout-demo?' + query
   }
 
   if (submitted) {
@@ -219,8 +229,8 @@ export default function GiftCardsPage() {
                   </div>
                 </div>
 
-                <Button type="submit" size="xl" variant="primary" className="w-full">
-                  Continue to Payment
+                <Button type="submit" size="xl" variant="primary" className="w-full" disabled={submitting}>
+                  {submitting ? "Redirecting to payment..." : "Continue to Payment"}
                 </Button>
 
                 <p className="text-xs font-medium text-muted text-center">
