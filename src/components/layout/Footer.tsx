@@ -7,6 +7,7 @@ import { Logo } from './Logo'
 import { site } from '@/lib/data/site'
 import { navLinks } from '@/lib/data/nav'
 import { Newsletter } from './Newsletter'
+import { FooterCredit } from './FooterCredit'
 
 export function Footer() {
   const year = new Date().getFullYear()
@@ -116,9 +117,13 @@ export function Footer() {
         </div>
 
         <div className="mt-10 pt-8 border-t border-border flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-xs font-medium text-muted">
-            © {year} {site.name}. All rights reserved.
-          </p>
+          <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
+            <p className="text-xs text-muted">
+              © {year} {site.name}. All rights reserved.
+            </p>
+            <span className="hidden sm:block h-3 w-px bg-border" />
+            <FooterCredit className="text-xs" />
+          </div>
           <div className="flex items-center gap-6 text-xs text-muted">
             <Link href="/privacy" className="hover:text-gold transition-colors">
               Privacy

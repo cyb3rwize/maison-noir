@@ -11,6 +11,7 @@ import { FloatingCTA } from '@/components/floating/FloatingCTA'
 import { ChatConcierge } from '@/components/floating/ChatConcierge'
 import { WhatsAppButton } from '@/components/floating/WhatsAppButton'
 import { ThemeToggle } from '@/components/floating/ThemeToggle'
+import { StudioBadge } from '@/components/floating/StudioBadge'
 import { ThemeScript } from '@/components/providers/ThemeScript'
 import { site } from '@/lib/data/site'
 
@@ -35,6 +36,15 @@ const accent = Cormorant_Garamond({
 })
 
 export const metadata: Metadata = {
+  authors: [
+    { name: 'CyberForge', url: 'https://cyberforge-pro-wheat.vercel.app' },
+  ],
+  creator: 'CyberForge',
+  publisher: 'CyberForge',
+  other: {
+    developer: 'CyberForge',
+    'built-by': 'CyberForge — https://cyberforge-pro-wheat.vercel.app',
+  },
   title: {
     default: `${site.name} — ${site.tagline}`,
     template: `%s | ${site.name}`,
@@ -69,6 +79,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <ThemeScript />
       </head>
       <body className="bg-bg-primary text-bone font-body antialiased">
+        {/* ============================================================
+            Website by CyberForge
+            https://cyberforge-pro-wheat.vercel.app
+            Modern websites, security audits, and software for growing businesses.
+            ============================================================ */}
         <Providers>
           <CustomCursor />
           <Navbar />
@@ -79,6 +94,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <ChatConcierge />
           <WhatsAppButton />
           <ThemeToggle />
+          <StudioBadge />
         </Providers>
       </body>
     </html>
