@@ -31,7 +31,7 @@ export function FloatingCTA() {
           animate={{ opacity: 1, y: 0, scale: 1 }}
           exit={{ opacity: 0, y: 20, scale: 0.9 }}
           transition={{ duration: 0.4, ease: EASE_OUT }}
-          className="hidden md:block fixed bottom-8 right-8 z-40"
+          className="hidden md:block fixed bottom-24 right-8 z-40"
         >
           <Link
             href="/reservations"

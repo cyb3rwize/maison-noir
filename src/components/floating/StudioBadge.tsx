@@ -27,7 +27,7 @@ export function StudioBadge({ enabled = studio.showFloatingBadge }: StudioBadgeP
       transition={{ delay: 2.0, duration: 0.5, ease: EASE_OUT }}
       whileHover={{ scale: 1.03, y: -2 }}
       whileTap={{ scale: 0.98 }}
-      className="fixed bottom-4 left-4 md:bottom-6 md:left-6 z-30 hidden md:flex items-center gap-2 pl-1 pr-3 py-1 rounded-pill glass border border-gold/20 hover:border-gold/40 shadow-float-md transition-colors duration-300 group"
+      className="fixed bottom-24 left-4 md:bottom-24 md:left-6 z-30 hidden md:flex items-center gap-2 pl-1 pr-3 py-1 rounded-pill glass border border-gold/20 hover:border-gold/40 shadow-float-md transition-colors duration-300 group"
     >
       <span className="relative h-7 w-7 rounded-md overflow-hidden bg-bg-primary flex items-center justify-center shrink-0">
         <Image
